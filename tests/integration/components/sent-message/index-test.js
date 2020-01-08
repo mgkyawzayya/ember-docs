@@ -3,22 +3,22 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
-module('Integration | Component | sent-message', function(hooks) {
+module('Integration | Component | sent-message/index', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
 
-    await render(hbs`<SentMessage />`);
+    await render(hbs`<SentMessage::Index />`);
 
     assert.equal(this.element.textContent.trim(), '');
 
     // Template block usage:
     await render(hbs`
-      <SentMessage>
+      <SentMessage::Index>
         template block text
-      </SentMessage>
+      </SentMessage::Index>
     `);
 
     assert.equal(this.element.textContent.trim(), 'template block text');

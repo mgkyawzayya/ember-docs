@@ -1,6 +1,7 @@
 <Message::Avatar
-  @title={{@avatarTitle}}
-  @initial={{@avatarInitial}}
+  @title="{{@username}}'s avatar"
+  {{! This won't work yet! We need to update the substring helper }}
+  @initial={{substring @username start=0 length=1}}
   @isActive={{@userIsActive}}
   class="{{if @isCurrentUser "current-user"}}"
 />

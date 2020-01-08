@@ -3,22 +3,22 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
-module('Integration | Component | sent-message/avatar', function(hooks) {
+module('Integration | Component | my-component/template', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
 
-    await render(hbs`<SentMessage::Avatar />`);
+    await render(hbs`<MyComponent::Template />`);
 
     assert.equal(this.element.textContent.trim(), '');
 
     // Template block usage:
     await render(hbs`
-      <SentMessage::Avatar>
+      <MyComponent::Template>
         template block text
-      </SentMessage::Avatar>
+      </MyComponent::Template>
     `);
 
     assert.equal(this.element.textContent.trim(), 'template block text');

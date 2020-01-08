@@ -1,0 +1,7 @@
+<BlogPost @post={{@blogPost}} as |title author body|>
+  <img src="./blog-logo.png" alt="hello">
+
+  {{body}}
+
+  <AuthorBio @author={{author}} />
+</BlogPost>

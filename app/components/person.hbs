@@ -1,0 +1,13 @@
+<ul>
+  {{#each this.people as |person index|}}
+    <li>Hello, {{person.name}}! You're number {{index}} in line</li>
+  {{else}}
+    Sorry, nobody is here
+  {{/each}}
+</ul>
+
+{{#each-in this.people as |name person|}}
+  Hello, {{name}}! You are {{person.age}} years old.
+{{else}}
+  Sorry, nobody is here.
+{{/each-in}}
